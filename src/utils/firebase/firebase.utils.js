@@ -5,10 +5,11 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
-//configurations of the linked firebase db
+//configurations of the linked firebase db instance
 const firebaseConfig = {
   apiKey: "AIzaSyAZRfEsNsu7YXjackoE4b8GdVZ1qxOX2i0",
   authDomain: "online-shop-db-b29ff.firebaseapp.com",
@@ -35,7 +36,7 @@ export const signInWithGooglePopup = () =>
 export const signInWithGoogleRedirect = () =>
   signInWithRedirect(auth, googleProvider);
 
-// Get the firestore db
+// Instantiate firestore
 export const db = getFirestore();
 // Create New User Doc
 export const createUserDocumentFromAuth = async (
@@ -46,7 +47,7 @@ export const createUserDocumentFromAuth = async (
   const userDocRef = doc(db, "users", userAuth.uid);
   const userSnapshot = await getDoc(userDocRef);
 
-  //if user data exists
+  //if user data not exists
   if (!userSnapshot.exists()) {
     const { displayName, email } = userAuth;
     const createdAt = new Date();
@@ -68,4 +69,9 @@ export const createUserDocumentFromAuth = async (
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
   return await createUserWithEmailAndPassword(auth, email, password);
+};
+
+export const signInAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+  return await signInWithEmailAndPassword(auth, email, password);
 };
