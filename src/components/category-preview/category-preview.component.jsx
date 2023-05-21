@@ -17,6 +17,7 @@ const CategoryPreivew = ({ title, products }) => {
             <ProductCard key={product.id} product={product} />
           ))}
       </div>
+      <hr className="container-seperator" />
     </div>
   );
 };
