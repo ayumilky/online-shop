@@ -52,10 +52,14 @@ export const CartContext = createContext({
   cartTotal: 0,
 });
 
+/* Cart Actions for carReducer */
+
 const CART_ACTION_TYPES = {
   SET_CART_ITEMS: "SET_CART_ITEMS",
   SET_IS_CART_OPEN: "SET_IS_CART_OPEN",
 };
+
+/* Set all the initial state for the cart */
 
 const INITIAL_STATE = {
   isCartOpen: false,
@@ -105,6 +109,8 @@ export const CartProvider = ({ children }) => {
       })
     );
   };
+
+  /* Actions Creator Functions */
 
   const addItemToCart = (productToAdd) => {
     const newCartItems = addCartItem(cartItems, productToAdd);

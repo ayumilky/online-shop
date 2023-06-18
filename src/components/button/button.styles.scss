@@ -9,12 +9,13 @@
     background-color: black;
     color: white;
     text-transform: uppercase;
-    font-family: 'Open Sans';
+    font-family: 'Titillium Web', sans-serif;
     font-weight: bolder;
     border: none;
     cursor: pointer;
     display: flex;
     justify-content: center;
+    transition: 0.3s;
   
     &:hover {
       background-color: white;
@@ -43,5 +44,18 @@
         border: none;
       }
     }
+
+    &.shop {
+      background-color: rgba(255, 255,255, 0.4);
+      color: white;
+      border: 1px solid #545454;
+      
+      &:hover {
+        background-color: rgba(255, 255,255, 0.6);
+        color: white;
+        border: 1px solid #545454;
+      }
+    }
+
   }
   

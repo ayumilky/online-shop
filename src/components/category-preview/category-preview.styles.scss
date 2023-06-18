@@ -1,7 +1,7 @@
 .category-preview-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   
     .title {
       font-size: 28px;
@@ -40,11 +40,10 @@
     }
 
     .container-seperator{
-      display: block;
-      border-width: 0.5px;
-      border-style: solid;
-      color: rgba($color: #777777, $alpha: 0.5);
-      margin: 50px 50rem 0px 50rem;
-      padding-top: 0px;
+      border-top: 1px solid #8c8b8b;
+      border-bottom: 1px solid #fff;
+      // color: rgba(0,0,0, 0.5);
+      margin: 50px 50px ;
+
     }
   }

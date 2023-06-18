@@ -10,6 +10,7 @@ google sign in
 const BUTTON_TYPES_CLASSES = {
   google: "google-sign-in",
   inverted: "inverted",
+  shop: "shop",
 };
 
 const Button = ({ children, buttonType, ...otherProps }) => {

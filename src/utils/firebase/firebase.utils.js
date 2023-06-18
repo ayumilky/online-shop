@@ -42,8 +42,10 @@ googleProvider.setCustomParameters({
 // Initialize firebase auth and get a ref to the service
 export const auth = getAuth();
 
-export const signInWithGooglePopup = () =>
-  signInWithPopup(auth, googleProvider);
+export const signInWithGooglePopup = async () => {
+  await signInWithPopup(auth, googleProvider);
+  // window.location = "/";
+};
 export const signInWithGoogleRedirect = () =>
   signInWithRedirect(auth, googleProvider);
 
@@ -69,15 +71,11 @@ export const getCategoriesAndDocuments = async () => {
   const collectionRef = collection(db, "categories");
   const q = query(collectionRef);
   const querySnapshot = await getDocs(q);
-  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+  return querySnapshot.docs.map((docSnapshot) => {
     const { title, items } = docSnapshot.data();
-    acc[title.toLowerCase()] = items;
-    return acc;
-  }, {});
-
-  return categoryMap;
+    return { title, items };
+  });
 };
-
 // Create New User Doc
 export const createUserDocumentFromAuth = async (
   userAuth,
@@ -119,5 +117,6 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
 export const signOutUser = async () => await signOut(auth);
 
 //Observer for the Auth
-export const onAuthStateChangedListener = (callback) =>
+export const onAuthStateChangedListener = (callback) => {
   onAuthStateChanged(auth, callback);
+};

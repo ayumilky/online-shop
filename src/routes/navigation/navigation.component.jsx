@@ -1,23 +1,34 @@
-import { Fragment, useContext } from "react";
+import { Fragment, useContext, useState } from "react";
 import { Outlet, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
-import { UserContext } from "../../contexts/user.context";
 import { CartContext } from "../../contexts/cart.context";
-import { ReactComponent as MoonLogo } from "../../assets/moon.svg";
+import { selectCurrentUser } from "../../store/user/user.selector";
+import NavLogo from "../../assets/NavLogo.png";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import "./navigation.styles.scss";
 
 const Navigation = () => {
-  const { currentUser } = useContext(UserContext);
+  const currentUser = useSelector(selectCurrentUser);
   const { isCartOpen } = useContext(CartContext);
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleMenuHandler = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <Fragment>
       <div className="navigation">
         <Link className="logo-container" to="/">
-          <MoonLogo className="logo" />
+          <img src={NavLogo} alt="logo" className="logo" />
         </Link>
-        <div className="nav-links-container">
+        <div
+          className={
+            isNavOpen ? "nav-links-container expand" : "nav-links-container"
+          }
+        >
           <Link className="nav-link" to="/shop">
             Shop
           </Link>
@@ -30,6 +41,9 @@ const Navigation = () => {
               Sign In
             </Link>
           )}
+          <Link className="hamburger-menu" onClick={toggleMenuHandler}>
+            <i className="fa fa-bars"></i>
+          </Link>
           <CartIcon />
         </div>
         {isCartOpen && <CartDropdown />}

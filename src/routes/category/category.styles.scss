@@ -3,7 +3,7 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     row-gap:50px;
-
+    justify-items: center;
 }
 
 .category-title{
@@ -11,3 +11,9 @@
     margin-bottom: 25px;
     text-align: center;
     }
+
+.shop-wrap{
+    max-width: 1350px;
+    min-width: 375px;
+    margin: 0 auto;
+}

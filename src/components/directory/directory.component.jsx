@@ -1,50 +1,52 @@
 import DirectoryItem from "../directory-item/directory-item.component";
+import DirectoryPhoto1 from "../../assets/img/DirectoryPhoto1.gif";
+import DirectoryPhoto2 from "../../assets/img/DirectoryPhoto2.jpeg";
+import DirectoryPhoto3 from "../../assets/img/DirectoryPhoto3.jpeg";
+import DirectoryPhoto4 from "../../assets/img/DirectoryPhoto4.jpeg";
+import DirectoryPhoto5 from "../../assets/img/DirectoryPhoto5.jpeg";
 import "./directory.styles.scss";
 
 const categories = [
   {
     id: 1,
-    title: "Womens",
-    imageUrl:
-      "https://images.unsplash.com/photo-1450297756549-a553121ddff2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-    route: "shop/womens",
+    title: "Collections",
+    imageUrl: DirectoryPhoto1,
+    route: "shop/dinnerware/1",
   },
   {
     id: 2,
-    title: "Mens",
-    imageUrl:
-      "https://images.unsplash.com/photo-1553143820-6bb68bc34679?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=748&q=80",
-    route: "shop/mens",
+    title: "Drinkware",
+    imageUrl: DirectoryPhoto2,
+    route: "shop/drinkware",
   },
   {
     id: 3,
-    title: "Accessories",
-    imageUrl:
-      "https://images.unsplash.com/photo-1537832816519-689ad163238b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1718&q=80",
-    route: "shop/accessories",
+    title: "Serveware",
+    imageUrl: DirectoryPhoto3,
+    route: "shop/serveware",
   },
   {
     id: 4,
-    title: "Shoes",
-    imageUrl:
-      "https://images.unsplash.com/photo-1589562481113-10555af3f69d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
-    route: "shop/shoes",
+    title: "Dinnerware",
+    imageUrl: DirectoryPhoto4,
+    route: "shop/dinnerware",
   },
   {
     id: 5,
-    title: "Kids",
-    imageUrl:
-      "https://images.unsplash.com/photo-1604467794349-0b74285de7e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
-    route: "shop/kids",
+    title: "Bakeware",
+    imageUrl: DirectoryPhoto5,
+    route: "shop/bakeware",
   },
 ];
 
 const Directory = () => {
   return (
-    <div className="directory-container">
-      {categories.map((category) => (
-        <DirectoryItem key={category.id} category={category} />
-      ))}
+    <div className="wrapper">
+      <div className="directory-container">
+        {categories.map((category) => (
+          <DirectoryItem key={category.id} category={category} />
+        ))}
+      </div>
     </div>
   );
 };
