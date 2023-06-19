@@ -1,0 +1,19 @@
+.category-menu-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000000;
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 1250px;
+
+.home-nav-container{
+    cursor: pointer;
+}
+}
+
+
+.cat-nav-links li{
+    display: inline;
+    margin-right: 0.8rem;
+    cursor: pointer;
+}

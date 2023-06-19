@@ -11,6 +11,7 @@ const BUTTON_TYPES_CLASSES = {
   google: "google-sign-in",
   inverted: "inverted",
   shop: "shop",
+  nav: "nav",
 };
 
 const Button = ({ children, buttonType, ...otherProps }) => {

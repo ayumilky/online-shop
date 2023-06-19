@@ -57,5 +57,22 @@
       }
     }
 
+    &.nav{
+      min-width: 20px;
+      width: 40px;
+      height: 40px;
+      font-size: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255,255, 0.6);
+      color: black;
+      
+      &:hover{
+        border: none;
+        color: rgba(83, 83, 83, 0.6);
+      }
+    }
+
   }
   

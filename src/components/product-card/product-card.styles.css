@@ -1,5 +1,5 @@
 .product-card-container {
-  width: 320px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,4 +53,5 @@
 }
 .product-card-container .footer .price {
   width: 15%;
+  font-weight: bold;
 }/*# sourceMappingURL=product-card.styles.css.map */

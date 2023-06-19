@@ -1,9 +1,11 @@
-import { useState, useEffect, Fragment } from "react";
-import { Route, Routes, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import ProductCard from "../../components/product-card/product-card.component";
 import "./category.styles.scss";
 import { useSelector } from "react-redux";
 import { selectCategoriesMap } from "../../store/categories/category.selector";
+import CategoryMenu from "../../components/category-menu/category-menu.component";
+import PaginationBar from "../../components/pagination/pagination.component";
 
 const Category = () => {
   const { category } = useParams();
@@ -18,6 +20,7 @@ const Category = () => {
   return (
     <div className="wrapper">
       <div className="shop-wrap">
+        <CategoryMenu />
         <h2 className="category-title">{category.toUpperCase()}</h2>
         <div className="category-container">
           {products &&

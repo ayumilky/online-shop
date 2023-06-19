@@ -1,9 +1,9 @@
 .category-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-  row-gap: 50px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 30px;
   justify-items: center;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .shop-wrap {
-  max-width: 1350px;
+  max-width: 1250px;
   min-width: 375px;
   margin: 0 auto;
 }/*# sourceMappingURL=category.styles.css.map */

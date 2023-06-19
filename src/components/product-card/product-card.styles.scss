@@ -1,5 +1,5 @@
 .product-card-container {
-    width: 320px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     // height: 280px;
@@ -62,6 +62,7 @@
   
       .price {
         width: 15%;
+        font-weight: bold;
       }
     }
   }

@@ -7,18 +7,11 @@ import CategoriesPreview from "../categories-preview/categories-preivew.componen
 import Category from "../category/category.component";
 import ProductPage from "../product-page/product-page.component";
 import { useSelector } from "react-redux";
-import {
-  selectCategoriesMap,
-  selectCategories,
-} from "../../store/categories/category.selector";
+import { selectCategories } from "../../store/categories/category.selector";
 import "./shop.styles.scss";
 const Shop = () => {
   const dispatch = useDispatch();
-  const categoriesMap = useSelector(selectCategoriesMap);
   const categories = useSelector(selectCategories);
-
-  console.log(categoriesMap);
-  console.log(categories);
 
   useEffect(() => {
     const getCategoriesMap = async () => {

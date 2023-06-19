@@ -49,4 +49,19 @@
   background-color: rgba(255, 255, 255, 0.6);
   color: white;
   border: 1px solid #545454;
+}
+.button-container.nav {
+  min-width: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+}
+.button-container.nav:hover {
+  border: none;
+  color: rgba(83, 83, 83, 0.6);
 }/*# sourceMappingURL=button.styles.css.map */

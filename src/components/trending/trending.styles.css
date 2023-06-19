@@ -1,0 +1,27 @@
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.trending-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 1250px;
+}
+.trending-container .silder-btns {
+  display: flex;
+}
+.trending-container .trending-products-container {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 10px repeat(5, 1fr) 10px;
+  grid-template-rows: minmax(150px, 1fr);
+}
+.trending-container .trending-products-container::before, .trending-container .trending-products-container ::after {
+  content: "";
+}
+.trending-container .trending-products-container > div {
+  width: 300px;
+}/*# sourceMappingURL=trending.styles.css.map */
