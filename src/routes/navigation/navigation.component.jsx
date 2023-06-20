@@ -12,11 +12,6 @@ import "./navigation.styles.scss";
 const Navigation = () => {
   const currentUser = useSelector(selectCurrentUser);
   const { isCartOpen } = useContext(CartContext);
-  const [isNavOpen, setIsNavOpen] = useState(false);
-
-  const toggleMenuHandler = () => {
-    setIsNavOpen(!isNavOpen);
-  };
 
   return (
     <Fragment>
@@ -24,26 +19,19 @@ const Navigation = () => {
         <Link className="logo-container" to="/">
           <img src={NavLogo} alt="logo" className="logo" />
         </Link>
-        <div
-          className={
-            isNavOpen ? "nav-links-container expand" : "nav-links-container"
-          }
-        >
+        <div className="nav-links-container">
           <Link className="nav-link" to="/shop">
-            Shop
+            <i class="fa-solid fa-shop"></i> <span>Shop</span>
           </Link>
           {currentUser ? (
-            <span className="nav-link" onClick={signOutUser}>
-              Sign Out
-            </span>
+            <Link className="nav-link" onClick={signOutUser}>
+              <i class="fa-solid fa-user"></i> <span>Sign Out</span>
+            </Link>
           ) : (
             <Link className="nav-link" to="/auth">
-              Sign In
+              <i class="fa-regular fa-user"></i> <span>Sign In</span>
             </Link>
           )}
-          <Link className="hamburger-menu" onClick={toggleMenuHandler}>
-            <i className="fa fa-bars"></i>
-          </Link>
           <CartIcon />
         </div>
         {isCartOpen && <CartDropdown />}

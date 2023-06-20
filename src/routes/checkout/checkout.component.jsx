@@ -13,19 +13,23 @@ const Checkout = () => {
           <span>Product</span>
         </div>
         <div className="header-block">
-          <span>Description</span>
+          <span className="full-form">Description</span>
+          <span className="short-form">Desc</span>
         </div>
         <div className="header-block">
-          <span>Quantity</span>
+          <span className="full-form">Quantity</span>
+          <span className="short-form">Qty</span>
         </div>
         <div className="header-block">
           <span>Price</span>
         </div>
         <div className="header-block">
-          <span>Sub Total</span>
+          <span className="full-form">Sub Total</span>
+          <span className="short-form">Sub.</span>
         </div>
         <div className="header-block">
-          <span>Remove</span>
+          <span className="full-form">Remove</span>
+          <span className="short-form">&#10005;</span>
         </div>
       </div>
 

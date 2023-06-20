@@ -1,5 +1,5 @@
 .checkout-container {
-  width: 55%;
+  width: 85%;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
 }
 .checkout-container .checkout-header .header-block {
   text-transform: capitalize;
-  width: 23%;
+  width: 20%;
 }
 .checkout-container .checkout-header .header-block:last-child {
   width: 8%;
@@ -24,4 +24,32 @@
   margin-top: 30px;
   margin-left: auto;
   font-size: 36px;
+}
+.checkout-container .short-form {
+  display: none;
+}
+
+/* Mobile View */
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .checkout-header {
+    font-size: 15px;
+  }
+  .checkout-container .full-form {
+    display: none;
+  }
+  .checkout-container .short-form {
+    display: block;
+  }
+}
+/* Tablet View */
+@media screen and (min-width: 481px) and (max-width: 680px) {
+  .checkout-item-container {
+    font-size: 15px;
+  }
+  .checkout-container .full-form {
+    display: none;
+  }
+  .checkout-container .short-form {
+    display: block;
+  }
 }/*# sourceMappingURL=checkout.styles.css.map */

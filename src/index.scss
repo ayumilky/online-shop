@@ -43,6 +43,14 @@ a{
   
 }
 
+
+@media screen and (min-width:250px) and (max-width:480px) {
+  .wrapper{
+      min-width: auto;
+  }
+  
+}
+
 // .ext-wrapper{
 //   min-width: 375px;
 // }

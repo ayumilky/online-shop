@@ -8,7 +8,7 @@
     align-items: center;
   
     .image-container {
-      width: 23%;
+      width: 18%;
       padding-right: 15px;
   
       img {
@@ -19,7 +19,7 @@
     .name,
     .quantity,
     .price {
-      width: 23%;
+      width: 19%;
     }
   
     .quantity {
@@ -40,3 +40,24 @@
     }
   }
   
+
+  /* Mobile View */
+  @media screen and (min-width:100px) and (max-width:480px) {
+    .checkout-item-container{
+      font-size: 15px;
+      .name,
+      .quantity,
+      .price {
+        width: 18%;
+      }
+    }
+
+  }
+
+    /* Tablet View */
+    @media screen and (min-width:481px) and (max-width:680px) {
+      .checkout-item-container{
+        font-size: 15px;
+      }
+
+  }
