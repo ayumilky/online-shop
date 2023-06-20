@@ -1,5 +1,9 @@
 #dependencies
 /node_modules
 
-.log
+#log files
+*.log
 .DS_Store
+
+*.css
+*.css.map

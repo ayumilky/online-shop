@@ -32,7 +32,11 @@ const Trending = ({ products, title }) => {
               {products
                 .filter((_, idx) => idx > 4)
                 .map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    title={title}
+                  />
                 ))}
             </div>
           </div>

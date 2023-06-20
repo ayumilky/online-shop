@@ -11,7 +11,10 @@ const ProductCard = ({ product, title }) => {
   return (
     <div className="product-card-container">
       <img src={imageUrl} alt={`${name}`} />
-      <Link to={`/shop/${title}/${product.id}`}>
+      <Link
+        to={`/shop/${title}/${product.id}`}
+        onClick={() => window.scrollTo(0, 280)}
+      >
         <img className="img-hover" src={otherImage[0]} alt={`${name}`} />
       </Link>
       <div className="footer">

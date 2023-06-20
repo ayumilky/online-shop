@@ -71,7 +71,11 @@ const ProductItem = ({ product, detailsInfo }) => {
             <span>${price}.00</span>
           </div>
           <div className="buttons">
-            <Button onClick={addProductToCart}>Add to Cart</Button>
+            <Button onClick={addProductToCart}>
+              <span className="shop-icon">
+                <i class="fa-solid fa-cart-plus"></i>
+              </span>
+            </Button>
           </div>
         </div>
         <hr />
