@@ -1,6 +1,8 @@
 .category-menu-container{
     display: flex;
     justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 30px;
     border-bottom: 1px solid #000000;
     font-size: 18px;
     margin-bottom: 50px;
@@ -17,3 +19,33 @@
     margin-right: 0.8rem;
     cursor: pointer;
 }
+
+.cat-nav-links{
+    .drop-down{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .cat-nav-links li{display: none;}
+
+    .cat-nav-links .drop-down{display: block;}
+  }
+
+
+@media screen and (max-width: 630px) {
+    .cat-nav-links.responsive {position: relative;}
+    .cat-nav-links.responsive .drop-down {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+    }
+    .cat-nav-links.responsive li {
+      display: block;
+      text-align: left;
+      position: relative;
+      top: 30px;
+      text-align: right;
+    }
+  }
