@@ -1,7 +1,6 @@
 .product-left {
   display: flex;
   width: auto;
-  place-self: center;
 }
 .product-left .main-img-container {
   display: flex;
@@ -39,7 +38,6 @@
   flex-direction: column;
   background-color: #fbfaf9;
   border: 1px solid #fbfaf9;
-  place-self: center;
 }
 .product-right .price-tag-section {
   display: flex;
