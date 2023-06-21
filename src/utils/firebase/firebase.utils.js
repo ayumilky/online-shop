@@ -44,7 +44,7 @@ export const auth = getAuth();
 
 export const signInWithGooglePopup = async () => {
   await signInWithPopup(auth, googleProvider);
-  // window.location = "/";
+  window.location = "/";
 };
 export const signInWithGoogleRedirect = () =>
   signInWithRedirect(auth, googleProvider);

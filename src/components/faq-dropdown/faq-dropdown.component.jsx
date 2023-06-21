@@ -7,7 +7,7 @@ const FaqDropdown = ({ faq, index }) => {
   const toggleIsFaqOpen = () => setIsFaqOpen(!isFaqOpen);
 
   return (
-    <div className={"faq" + (isFaqOpen ? " open" : "")} key={index}>
+    <div className={"faq" + (isFaqOpen ? " open" : "")}>
       <div className="faq-question" onClick={toggleIsFaqOpen}>
         {faq.question}
       </div>

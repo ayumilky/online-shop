@@ -23,7 +23,7 @@ const CategoryMenu = () => {
           }
         >
           <li className="drop-down" onClick={toggleCategoryMenu}>
-            Menu <i class="fa-sharp fa-solid fa-caret-down"></i>
+            Menu <i className="fa-sharp fa-solid fa-caret-down"></i>
           </li>
           <Link to="/shop/bakeware" onClick={toggleCategoryMenu}>
             <li>Bakeware</li>

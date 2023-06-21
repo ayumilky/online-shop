@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import FaqDropdown from "../faq-dropdown/faq-dropdown.component";
 import Button from "../button/button.component";
 import "./product-item.styles.scss";
-import { useContext } from "react";
-import { CartContext } from "../../contexts/cart.context";
+import { useDispatch, useSelector } from "react-redux";
+import { addItemToCart } from "../../store/cart/cart.action";
+import { selectCartItems } from "../../store/cart/cart.selector";
+
 const ProductItem = ({ product, detailsInfo }) => {
-  const { addItemToCart } = useContext(CartContext);
-  const addProductToCart = () => addItemToCart(product);
+  const dispatch = useDispatch();
+  const cartItems = useSelector(selectCartItems);
+  const addProductToCart = () => dispatch(addItemToCart(cartItems, product));
 
   const { otherImage, price, tag, longdesc, name } = product;
 
@@ -73,7 +76,7 @@ const ProductItem = ({ product, detailsInfo }) => {
           <div className="buttons">
             <Button onClick={addProductToCart}>
               <span className="shop-icon">
-                <i class="fa-solid fa-cart-plus"></i>
+                <i className="fa-solid fa-cart-plus"></i>
               </span>
             </Button>
           </div>
@@ -81,7 +84,7 @@ const ProductItem = ({ product, detailsInfo }) => {
         <hr />
         <div className="details-section">
           {detailsInfo.map((detailInfo, i) => (
-            <FaqDropdown faq={detailInfo} index={i} />
+            <FaqDropdown faq={detailInfo} index={i} key={i} />
           ))}
         </div>
       </div>

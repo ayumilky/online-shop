@@ -13,7 +13,16 @@ const Footer = () => {
               <li>About Us</li>
               <li>Store Locator</li>
               <li>Contact Us</li>
-              <li>Social Media</li>
+              <li className="social-media-icon">
+                <i className="fa-brands fa-square-facebook"></i>{" "}
+              </li>
+              <li className="social-media-icon">
+                <i className="fa-brands fa-square-twitter"></i>{" "}
+              </li>
+              <li className="social-media-icon">
+                {" "}
+                <i className="fa-brands fa-square-instagram"></i>
+              </li>
             </ul>
           </div>
         </div>

@@ -5,7 +5,7 @@ const Loading = () => {
     <div className="wrapper">
       <div className="loading-container">
         <div className="child">
-          <div class="lds-ellipsis">
+          <div className="lds-ellipsis">
             <div></div>
             <div></div>
             <div></div>

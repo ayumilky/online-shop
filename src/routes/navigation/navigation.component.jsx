@@ -1,18 +1,18 @@
-import { Fragment, useContext, useState } from "react";
+import { Fragment } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
-import { CartContext } from "../../contexts/cart.context";
+
 import { selectCurrentUser } from "../../store/user/user.selector";
+import { selectIsCartOpen } from "../../store/cart/cart.selector";
 import NavLogo from "../../assets/NavLogo.png";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import "./navigation.styles.scss";
 
 const Navigation = () => {
   const currentUser = useSelector(selectCurrentUser);
-  const { isCartOpen } = useContext(CartContext);
-
+  const isCartOpen = useSelector(selectIsCartOpen);
   return (
     <Fragment>
       <div className="navigation">
@@ -21,15 +21,15 @@ const Navigation = () => {
         </Link>
         <div className="nav-links-container">
           <Link className="nav-link" to="/shop">
-            <i class="fa-solid fa-shop"></i> <span>Shop</span>
+            <i className="fa-solid fa-shop"></i> <span>Shop</span>
           </Link>
           {currentUser ? (
             <Link className="nav-link" onClick={signOutUser}>
-              <i class="fa-solid fa-user"></i> <span>Sign Out</span>
+              <i className="fa-solid fa-user"></i> <span>Sign Out</span>
             </Link>
           ) : (
             <Link className="nav-link" to="/auth">
-              <i class="fa-regular fa-user"></i> <span>Sign In</span>
+              <i className="fa-regular fa-user"></i> <span>Sign In</span>
             </Link>
           )}
           <CartIcon />
