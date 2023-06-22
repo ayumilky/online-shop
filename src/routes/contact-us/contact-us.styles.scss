@@ -1,0 +1,118 @@
+.store-location-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    .map-left{
+        width: auto;
+        border:1px solid #b6997d;
+
+    }
+
+    .add-right{
+        margin-left: 10px;
+        background-color: #b6997d;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        .add-card{
+            display: flex;
+            justify-content: center;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255,255,255, 0.5);
+            height: 220px;
+            width: 100%;
+            padding: 30px;
+            .add-top{
+
+                img{
+
+                    height: 300px;
+                    width: auto;
+                    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);
+                }
+
+            }
+            .add-down{
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+
+  /* Mobile View */
+  @media screen and (min-width:100px) and (max-width:480px) {
+    .store-location-container{
+        flex-direction: column;
+        align-items: center;
+        .map-left{
+            width: 300px;
+            border: 0px;
+        }
+        .add-right{
+            width: 300px;
+            margin-left: 0px;
+            margin-top: 10px;
+            .add-card{
+                flex-direction: column;
+                height: auto;
+            }
+        }
+    }
+    } 
+
+
+    /* Tablet View */
+    @media screen and (min-width:481px) and (max-width:680px) {
+
+        .store-location-container{
+            flex-direction: column;
+            align-items: center;
+            .map-left{
+                width: 400px;
+                border: 0px;
+            }
+            .add-right{
+                width: 400px;
+                margin-left: 0px;
+                margin-top: 10px;
+                .add-card{
+                    flex-direction: column;
+                    height: auto;
+                    .add-top{
+
+                    }
+                }
+            }
+        }
+  }
+    /* Laptop View */
+    @media screen and (min-width:681px) and (max-width:1024px) {
+
+        .store-location-container{
+            flex-direction: column;
+            align-items: center;
+            .map-left{
+                width: 600px;
+                border: 0px;
+            }
+            .add-right{
+                width:600px;
+                margin-left: 0px;
+                margin-top: 10px;
+                .add-card{
+                    flex-direction: column;
+                    height: auto;
+                }
+            }
+        }
+  }
+
+  @media screen and (min-width:1025px) and (max-width:1250px) {
+
+    .store-location-container .add-right .add-card{
+        flex-direction: column;
+    }
+  }

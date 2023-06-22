@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./footer.styles.scss";
 import Logo from "../../assets/Logo.png";
 const Footer = () => {
@@ -11,8 +12,9 @@ const Footer = () => {
           <div className="footer-list">
             <ul>
               <li>About Us</li>
-              <li>Store Locator</li>
-              <li>Contact Us</li>
+              <Link to="/contactus">
+                <li>Contact Us</li>
+              </Link>
               <li className="social-media-icon">
                 <i className="fa-brands fa-square-facebook"></i>{" "}
               </li>
