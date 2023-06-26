@@ -1,3 +1,4 @@
+import Loading from "../loading/loading.component";
 import "./button.styles.scss";
 
 /*
@@ -12,15 +13,17 @@ const BUTTON_TYPES_CLASSES = {
   inverted: "inverted",
   shop: "shop",
   nav: "nav",
+  payment: "payment",
 };
 
-const Button = ({ children, buttonType, ...otherProps }) => {
+const Button = ({ children, buttonType, isLoading, ...otherProps }) => {
   return (
     <button
       className={`button-container ${BUTTON_TYPES_CLASSES[buttonType]}`}
+      disabled={isLoading}
       {...otherProps}
     >
-      {children}
+      {isLoading ? <Loading /> : children}
     </button>
   );
 };

@@ -3,7 +3,12 @@
 
 #log files
 *.log
+
+#misc
 .DS_Store
+.env*
 
 *.css
 *.css.map
+# Local Netlify folder
+.netlify

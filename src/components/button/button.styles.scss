@@ -74,5 +74,27 @@
       }
     }
 
+
+    &.payment{
+      min-width: 50px;
+      height: 50px;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255,255, 0.6);
+      color: #b6997d;
+      border: 1px solid #b6997d ;
+      margin-left: auto;
+      margin-top: 30px;
+      
+      
+      &:hover{
+        color: #927459;
+        border: 1px solid #b6997d ;
+        background-color: rgba(255, 255,255, 0.6);
+
+      }
+    }
   }
   

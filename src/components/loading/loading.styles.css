@@ -1,6 +1,6 @@
 .loading-container {
   position: relative;
-  margin-top: 20rem;
+  margin-top: 10px;
 }
 .loading-container .child {
   position: absolute;

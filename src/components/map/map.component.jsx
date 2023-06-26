@@ -8,7 +8,7 @@ const Map = ({ storeLocateInfo }) => {
 
   useEffect(() => {
     let map = tt.map({
-      key: "GXkhWHTr7tBm6eP9Zmpk0SI4r7trJg0r",
+      key: process.env.REACT_APP_TOMTOMMAP_API_KEY,
       container: "map",
       center: [longitude, ladtitude],
       zoom: 15,
