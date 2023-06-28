@@ -9,7 +9,7 @@ const Payment = () => {
   const [clientSecret, setClientSecret] = useState("");
   const amount = useSelector(selectCartTotal);
   useEffect(() => {
-    const response = fetch("/.netlify/functions/create-payment-intent", {
+    fetch("/.netlify/functions/create-payment-intent", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -23,6 +23,8 @@ const Payment = () => {
 
   return (
     <>
+      <br />
+
       <h1>Payment</h1>
       {stripePromise && clientSecret && (
         <Elements stripe={stripePromise} options={{ clientSecret }}>

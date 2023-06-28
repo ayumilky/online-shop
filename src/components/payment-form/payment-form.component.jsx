@@ -51,7 +51,6 @@ const PaymentForm = () => {
     <div className="payment-form-container">
       <form className="payment-form" onSubmit={paymentHandler}>
         <PaymentElement />
-
         <div className="payment-btn">
           <Button isLoading={isProcessingPayment} buttonType="payment">
             Pay Now
