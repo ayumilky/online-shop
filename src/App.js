@@ -15,6 +15,7 @@ import ContactUs from "./routes/contact-us/contact-us.component";
 import Footer from "./components/footer/footer.component";
 import { setCurrentUser } from "./store/user/user.action";
 import SHOP_DATA from "./shop-data";
+import PaymentCompletion from "./routes/payment-completion/payment-completion.component";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="auth" element={<Authentication />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="contactus" element={<ContactUs />} />
+          <Route path="paymentcomplete" element={<PaymentCompletion />} />
         </Route>
       </Routes>
       <Footer />
